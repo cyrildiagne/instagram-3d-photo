@@ -1,0 +1,5 @@
+runtime: python37
+
+env_variables:
+  PROJECT_ID: "" # TODO: Set your project ID Here
+  PUBSUB_TOPIC: "insta3d"

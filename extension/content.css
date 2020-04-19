@@ -1,0 +1,18 @@
+.waiting {
+  opacity: 0.2;
+}
+
+.queued {
+  opacity: 0.5;
+}
+
+.processing {
+  animation: blink 0.7s infinite;
+}
+
+
+@keyframes blink {
+  0% { opacity: 0.4 }
+  50% { opacity: 0.8 }
+  100% { opacity: 0.4 }
+}

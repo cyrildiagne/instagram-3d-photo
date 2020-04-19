@@ -1,0 +1,6 @@
+.DS_Store
+node_modules
+venv
+
+insta3d-colab-key.json
+3d-photo-inpainting

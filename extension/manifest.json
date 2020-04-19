@@ -1,0 +1,30 @@
+{
+  "name": "Insta3D",
+  "description": "Turn instagram posts into 3D photos",
+  "version": "0.1",
+  "permissions": [
+    "https://storage.cloud.google.com/*",
+    "https://storage.googleapis.com/*",
+    "http://localhost:8080/*"
+  ],
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Insta3D",
+    "default_icon": "icon.png"
+  },
+  "manifest_version": 2
+}
