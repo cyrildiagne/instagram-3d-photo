@@ -4,6 +4,8 @@ on images from instagram profile pages.
 It uses [3d-photo-inpainting](https://github.com/vt-vl-lab/3d-photo-inpainting)
 running in Colab (free GPU) and Cloud pubsub/storage for communication.
 
+![Demo](media/demo.gif)
+
 # Setup the GCP Project
 
 ### Set the default project
