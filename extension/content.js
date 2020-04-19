@@ -30,6 +30,8 @@ async function processAndReplace(img) {
       video.width = img.width;
       video.height = img.height;
       video.muted = true;
+      video.autoplay = true;
+      video.loop = true;
       video.style.position = "absolute";
       video.style.left = 0;
       video.style.top = 0;
@@ -42,24 +44,24 @@ async function processAndReplace(img) {
   // setTimeout(() => processAndReplace(img), 1000);
 }
 
-function update() {
-  for (const video of videos) {
-    if (!video.duration) {
-      continue;
-    }
-    const rect = video.getBoundingClientRect();
-    // Only update if video is visible.
-    if (rect.y < -rect.height * 0.5 || rect.y > window.innerHeight) {
-      continue;
-    }
-    // Translate y position to current frame. Because the video has been encoded
-    // with 1 keyframe per frame, the update will be very fast.
-    let offset =
-      (rect.y + rect.height * 0.25) / (window.innerHeight - rect.height * 0.5);
-    offset = 1 - Math.min(Math.max(0, offset), 1);
-    video.currentTime = offset * video.duration;
-  }
-}
+// function mapScrollToCurrentTime() {
+//   for (const video of videos) {
+//     if (!video.duration) {
+//       continue;
+//     }
+//     const rect = video.getBoundingClientRect();
+//     // Only update if video is visible.
+//     if (rect.y < -rect.height * 0.5 || rect.y > window.innerHeight) {
+//       continue;
+//     }
+//     // Translate y position to current frame. Because the video has been encoded
+//     // with 1 keyframe per frame, the update will be very fast.
+//     let offset =
+//       (rect.y + rect.height * 0.25) / (window.innerHeight - rect.height * 0.5);
+//     offset = 1 - Math.min(Math.max(0, offset), 1);
+//     video.currentTime = offset * video.duration;
+//   }
+// }
 
 function run() {
   let images = document.getElementsByTagName("img");
@@ -75,7 +77,7 @@ function run() {
     processAndReplace(img);
   }
 
-  window.addEventListener("scroll", update);
+  // window.addEventListener("scroll", mapScrollToCurrentTime);
 }
 
 // Listen for background script message when the button has been clicked.

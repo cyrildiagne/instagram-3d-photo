@@ -49,5 +49,5 @@ gcloud pubsub subscriptions create --topic $TOPIC_NAME $TOPIC_NAME-sub
 # Changes with the original 3d-photo-inpainting
 
 - Update `argument.yml` to use custom path + smaller size + custom fps/duration
-- Update path in `utils.py` to start from negative
+- Update straight-line and circle paths in `utils.py`
 - Set ffmpeg to create 1 keyframe per frame in `mesh.py`
