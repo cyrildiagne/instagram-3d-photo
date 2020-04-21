@@ -4,7 +4,12 @@ on images from instagram profile pages.
 It uses [3d-photo-inpainting](https://github.com/vt-vl-lab/3d-photo-inpainting)
 running in Colab (free GPU) and Cloud pubsub/storage for communication.
 
+More info: https://twitter.com/cyrildiagne/status/1251920177782042624
+
 ![Demo](media/demo.gif)
+
+**Original Paper:** [3D Photography using Context-aware Layered Depth Inpainting](https://arxiv.org/abs/2004.04727)
+_Meng-Li Shih, Shih-Yang Su, Johannes Kopf, Jia-Bin Huang_
 
 ### ⚠️ Word of caution!
 
