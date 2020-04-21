@@ -6,6 +6,11 @@ running in Colab (free GPU) and Cloud pubsub/storage for communication.
 
 ![Demo](media/demo.gif)
 
+### ⚠️ Word of caution!
+
+🧪 This project is highly experimental and requires a strong knowledge of the Google Cloud Platform to setup & run.
+I will try to improve the documentation in the coming days/weeks.
+
 # Setup the GCP Project
 
 ### Set the default project
