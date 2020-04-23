@@ -12,15 +12,18 @@ function assert_set() {
   fi
 }
 
-# Make sure required variables are set
+# Make sure required variables are set.
 assert_set PROJECT_ID $PROJECT_ID
 assert_set TOPIC_NAME $TOPIC_NAME
 
 # Set gcloud's default project.
 gcloud config set project $PROJECT_ID
 
-# Create topic
+# Make sure PubSub is enabled on the project.
+gcloud services enable pubsub
+
+# Create topic.
 gcloud pubsub topics create $TOPIC_NAME
 
-# Create subscription
+# Create subscription.
 gcloud pubsub topics create $TOPIC_NAME
