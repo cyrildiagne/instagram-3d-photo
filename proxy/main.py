@@ -8,7 +8,7 @@ from google.cloud import storage, pubsub_v1
 
 # Retrieve the project_id and topic_name for PubSub.
 pubsub_project_id = os.environ.get('PROJECT_ID', 'cyrildiagne-ml')
-pubsub_topic_name = os.environ.get('PUBSUB_TOPIC', 'insta3d')
+pubsub_topic_name = os.environ.get('TOPIC_NAME', 'insta3d')
 
 # Setup the pubsub client.
 publisher_client = pubsub_v1.PublisherClient()
