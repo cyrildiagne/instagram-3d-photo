@@ -56,7 +56,7 @@ export COLAB_KEY_FILE=./insta3d-colab-key.json
 
 ```bash
 export TOPIC_NAME=insta3d
-./scripts/create_colab_key.sh
+./scripts/create_pubsub.sh
 ```
 
 ### Enable CORS on your bucket
