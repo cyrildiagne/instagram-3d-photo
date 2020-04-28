@@ -26,4 +26,4 @@ gcloud services enable pubsub
 gcloud pubsub topics create $TOPIC_NAME
 
 # Create subscription.
-gcloud pubsub topics create $TOPIC_NAME
+gcloud pubsub subscriptions create --topic $TOPIC_NAME $TOPIC_NAME-sub
